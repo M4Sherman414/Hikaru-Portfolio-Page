@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div style="margin-top: 70px;" align="center"><a href="home.html"><img src="videos/hikaru.png" alt="hikaru"></a></div>
+    <div class="all">
+        <a href="home.html" class="button-link">Home</a>
+        <a href="about.html" class="button-link">About Hikaru</a>
+        <a href="videos.html" class="pressed-button-link">Videos</a>
+        <a href="rating.html" class="button-link">Rating</a>
+        <a href="social.html" class="button-link">Social</a>
+        <a href="account.php"><img src="videos/account-svgrepo-com.png" alt=""></a>
+    </div>
+
+    <div class="content-frame">
+
+        <div class="video-frame">
+            <div style="margin-bottom:50px;flex: 2;" class="video-box">
+                TV Hikaru
+                <iframe
+                style="border-radius: 20px;border:2px solid #ffffffb8;" 
+                id="yt-embed"
+                width="600" 
+                height="360"
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div id="videos" class="comment-block">
+                
+                <div >
+                    <div id="videos-header" style="margin-left:25px;width:150px;padding-bottom:5px;border-bottom: 1px solid;">Comments</div>
+                </div>
+                <div class="back-button" onclick="back()"><img src="videos/back-3.png" alt=""></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div style="width:50%;" class="footer">
+        <div class="section">
+            <p>Hikaru Nakamura<br>All rights reserved.<br>Made by <a class="p1" href="burhanco.html">BurhanCo</a></p>
+        </div>
+
+        <div style="margin-left: 30px;" class="section">
+            <p>Follow Hikaru<br>
+                <a class="facebook-link" href="https://www.facebook.com/GMHikaru">Facebook</a><br>
+                <a class="twitch-link" href="https://www.twitch.tv/gmhikaru">Twitch</a><br>
+                <a class="twitter-link" href="https://x.com/gmhikaru">X</a></p>
+        </div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div  class="section">
+            <a href="https://lichess.org"><img src="videos/lichess.png" alt=""></a>
+        </div>
+        <div class="section"> 
+            <a href="https://chess.com"><img src="videos/chess.jpg" alt="chees.com"></a>
+        </div>
+        <br><br><br><br><br><br><br>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const videoID = params.get('video');
+        
+        const iframe = document.getElementById('yt-embed');
+        iframe.src = "https://www.youtube.com/embed/" + videoID;
+
+        function back(){
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>
