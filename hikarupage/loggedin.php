@@ -40,9 +40,6 @@ session_start();
     
     <br><br><br>
     <div class="footer">
-        <div class="section">
-            <p>Hikaru Nakamura<br>All rights reserved.<br>Made by <a class="p1" href="burhanco.html">BurhanCo</a></p>
-        </div>
 
         <div style="margin-left: 30px;" class="section">
             <p>Follow Hikaru<br>
